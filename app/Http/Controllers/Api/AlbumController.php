@@ -20,7 +20,7 @@ class AlbumController extends Controller
 
         try {
 
-            $user = Album::create([
+            $album = Album::create([
                 'id' => Str::uuid(),
                 'name' => $request->name,
             ]);
@@ -28,7 +28,7 @@ class AlbumController extends Controller
             DB::commit();
 
             return response()->json([
-                'user' => $user,
+                'album' => $album,
                 'message' => 'Album created successfully!'
             ],201);
 

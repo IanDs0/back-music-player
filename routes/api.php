@@ -16,6 +16,6 @@ Route::put('/album/{album_id}/add_music/{music_id}', [AlbumController::class, 'a
 Route::delete('/album/{album_id}/add_music/{music_id}', [AlbumController::class, 'remove_music']);
 
 Route::post('/music', [MusicController::class, 'store']);
-Route::delete('/album/{id}', [MusicController::class, 'destroy']);
+Route::delete('/music/{id}', [MusicController::class, 'destroy']);
 
 

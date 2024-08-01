@@ -16,15 +16,15 @@ class MusicController extends Controller
 
         try {
 
-            $user = Music::create([
+            $music = Music::create([
                 'id' => Str::uuid(),
-                'name' => $request->name,
+                'title' => $request->title,
             ]);
 
             DB::commit();
 
             return response()->json([
-                'user' => $user,
+                'music' => $music,
                 'message' => 'Music created successfully!'
             ],201);
 
